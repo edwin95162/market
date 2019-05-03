@@ -11,6 +11,6 @@
 	if ($conn->connect_error){ //si la conección tiene un error..
 			die("Error: ". $conn->connect_error);
 	}else {
-			die ("Conexiòn Existosa a Market");
+			//die ("Conexiòn Existosa a Market");
 	}	
 ?>

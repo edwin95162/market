@@ -39,12 +39,58 @@
 	 </table>
 	 </form>
 	 <hr>
-	</body>
-
-
+	 </body>
 </html>
 
 
-<?php
+ <table border = 1 align = "center">
+	<tr><th>CÒDIGO</th><th>NOMBRE</th><th>CANTIDAD</th>
+	<th>:</th><th>::</th></tr>
 
+
+
+<?php
+	//1.Conexiòn a BD
+	include ("database.php");
+	
+	//2.Crear SQL y ejecuta SQL
+	$sql = "SELECT * FROM productos"; //consulta
+	$result = $conn->query($sql); // presionar f5
+	
+	//3. Mostrar Informaciòn
+	if ($result->num_rows > 0){
+			while($row = $result->fetch_assoc()){ //Crea vector, y Recorre tabla productos
+				echo "<tr>";	//crea nueva fila en la <tabla> 
+				echo "<td>".$row["codigo_prod"]."</td>";
+				echo "<td>".$row["nombre_prod"]."</td>";
+				echo "<td>".$row["cantidad_prod"]."</td>";
+				echo "<td><img src='icons/edit.png'
+				width='20'></td>";
+				echo "<td><a href='delete_product.php?cod=".$row["codigo_prod"]."'><img src='icons/delete.png' 
+				width='20'><a></td>"; //despues de  ?parametros para eliminar
+				echo "</tr>";
+			}		
+	}else{ //si es igual a cero 
+	echo "<table align = center>";
+		echo "::: No hay Productos Registrados :::";
+	echo"</table>";
+	}	
+	
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
