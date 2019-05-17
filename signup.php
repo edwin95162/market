@@ -49,7 +49,7 @@
     </div>
     <div class="form-group">
       <label for="pwd">Confirmar password:</label>
-	  <input type="password" class="form-control" id="pwd2" placeholder="Enter password"   name="pswd2" required >
+	  <input type="password" class="form-control" id="pwd2" placeholder="Enter password"  OnKeyUp="script" name="pswd2" required >
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please fill out this field.</div>
     
