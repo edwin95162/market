@@ -19,7 +19,7 @@
 <div class="container">
   <h2>Sign Up</h2>
   <p>Formulario de registro de usuarios</p>
-  <form  name="f1" action="uregister.php" class="was-validated" method="POST">
+  <form  name="f1" action="uregister.php" class="was-validated" method="POST" enctype="multipart/form-data">
     <div class="form-group">
       <label for="uname">Fisrtname:</label>
       <input type="text" class="form-control" id="uname" placeholder="Enter Firstname" name="uname" required>
