@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-04-2019 a las 20:00:21
+-- Tiempo de generación: 17-05-2019 a las 18:50:56
 -- Versión del servidor: 10.1.29-MariaDB
 -- Versión de PHP: 7.2.0
 
@@ -19,32 +19,36 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `market`
+-- Base de datos: `files`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `productos`
+-- Estructura de tabla para la tabla `users`
 --
 
-CREATE TABLE `productos` (
+CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `nombre_prod` varchar(50) COLLATE utf8_bin NOT NULL,
-  `codigo_prod` varchar(10) COLLATE utf8_bin NOT NULL,
-  `cantidad_prod` int(11) NOT NULL,
-  `estado_prod` tinyint(1) NOT NULL DEFAULT '1',
-  `fecha_ingreso` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `id_number` varchar(20) NOT NULL,
+  `photo` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id`, `id_number`, `photo`) VALUES
+(1, '123456', 'photos/newton_joven.jpg');
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `productos`
+-- Indices de la tabla `users`
 --
-ALTER TABLE `productos`
+ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -52,10 +56,10 @@ ALTER TABLE `productos`
 --
 
 --
--- AUTO_INCREMENT de la tabla `productos`
+-- AUTO_INCREMENT de la tabla `users`
 --
-ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

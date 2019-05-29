@@ -9,6 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   
+ <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
   <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
     <script src="script.js"></script>
   
@@ -32,14 +33,30 @@
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
 	
+	<div class="form-group">
+      <label for="uname">Identification:</label>
+      <input type="number" class="form-control" id="uide" placeholder="Enter number" name="uide" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+	
+	<div class="form-group">
+      <label for="uname">Gender:</label>
+      <select name="gender" class="form-control">
+	  <option value="M">Male</option>
+	  <option value="F">Female</option>
+	  <option value="O">Other</option>
+	  </select>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+	
     <div class="form-group">
       <label for="uname">Email:</label>
       <input type="email" class="form-control" id="uemail" placeholder="Enter email" name="uemail" required>
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
-    
-	
+    	
 	
 	<div class="form-group">
       <label for="pwd">Password:</label>
@@ -52,10 +69,16 @@
 	  <input type="password" class="form-control" id="pwd2" placeholder="Enter password"  OnKeyUp="script" name="pswd2" required >
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please fill out this field.</div>
-    
-	<span id="error2"></span></div>
+    </div>
 	
-    <button type="submit" id="aceptar" class="btn btn-primary" name="nombreboton">Register</button>
+	<div class="form-group" enctype="multipart/form-data>
+	<tr>
+		<label for="pwd">Your Photo:</label>
+		<input type="file" name="photo" ></td> 
+	<!--Llamar a Jquery y verificar -->
+	</tr>
+	</div>
+	   <button type="submit" id="aceptar" class="btn btn-primary" name="nombreboton">Register</button>
   </form>
 </div>
 
