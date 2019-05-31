@@ -15,7 +15,8 @@
     }
     
     //$pswd=MD5($_POST['pswd']);
-	$pswd=password_hash($_POST['pswd'],PASSWORD_DEFAULT);
+	//$pswd=password_hash($_POST['pswd'],PASSWORD_DEFAULT);
+	$pswd=$_POST['pswd'];
     //Validar que no se repita la identificacion en el registro
     $sql_validation = "SELECT * FROM usuarios WHERE identification = '$ide_user' ";
 	$result=$conn->query($sql_validation);

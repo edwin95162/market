@@ -2,8 +2,8 @@
     include("database.php");
 
     $email=$_POST['aemail'];
-	$pswd=password_hash($_POST['apswd'],PASSWORD_DEFAULT);
-	
+	//$pswd=password_hash($_POST['apswd'],PASSWORD_DEFAULT);
+	$pswd=$_POST['apswd'];
 	//1. Create query
 	$sql_validation1 = "SELECT * FROM usuarios WHERE email = '$email'"; 
 	$sql_validation2 = "SELECT * FROM usuarios WHERE password = '$pswd'";
