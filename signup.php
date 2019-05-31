@@ -74,7 +74,7 @@
 	<div class="form-group" enctype="multipart/form-data>
 	<tr>
 		<label for="pwd">Your Photo:</label>
-		<input type="file" name="photo" ></td> 
+		<input type="file" name="photo" accept="photos/gif, .jpg, .png" ></td> 
 	<!--Llamar a Jquery y verificar -->
 	</tr>
 	</div>
